@@ -10,9 +10,9 @@
             </div>
             @if (isset($images))
                 <div>
-                @foreach($images as $image)
-                    <img width="200" class="img-rounded" src="/public/upload/aimage-{{$value->id}}/{{ $image }}"/>
-                @endforeach
+                    @foreach($images as $image)
+                        <img width="200" class="img-rounded" src="/public/upload/aimage-{{$value->id}}/{{ $image }}"/>
+                    @endforeach
                 </div>
             @endif
             <footer>

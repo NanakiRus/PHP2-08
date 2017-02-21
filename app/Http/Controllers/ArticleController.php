@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ArticleRequest;
-use App\Models\Article;
-use Illuminate\Http\Request;
+use App\Models\{
+    Article,
+    Image
+};
 use Validator;
-use App\Http\Controllers\Controller;
-use App\Models\Image;
 
 class ArticleController extends Controller
 {

@@ -32,9 +32,9 @@ class Article extends Model
         return self::where('slug', '=', $slug)->get();
     }
 
-    public function getAllArticle()
+    public static function getAllArticle()
     {
-        return $this->latest('published_at')->paginate(10);
+        return self::latest('published_at')->paginate(10);
     }
 
 }

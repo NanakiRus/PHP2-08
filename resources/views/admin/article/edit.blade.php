@@ -66,9 +66,9 @@
             </div>
         </form>
         @if (isset($images))
-        @foreach($images as $image)
-            <img width="200" class="img-rounded" src="/public/upload/aimage-{{$value->id}}/{{ $image }}"/>
-        @endforeach
+            @foreach($images as $image)
+                <img width="200" class="img-rounded" src="/public/upload/aimage-{{$value->id}}/{{ $image }}"/>
+            @endforeach
         @endif
     @endforeach
 @endsection

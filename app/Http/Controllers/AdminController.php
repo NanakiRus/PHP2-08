@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Image;
+use App\Models\{
+    Article,
+    Image
+};
 use Illuminate\Support\Facades\Auth;
-use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Model;
 use Validator;
@@ -30,9 +32,9 @@ class AdminController
         return view('admin.index');
     }
 
-    public function showAllArticle(Article $articleModel)
+    public function showAllArticle()
     {
-        return view('admin.article.all', ['articles' => $articleModel->getAllArticle()]);
+        return view('admin.article.all', ['articles' => Article::getAllArticle()]);
     }
 
     public function showOneArticle($slug)
